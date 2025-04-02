@@ -1,4 +1,4 @@
-class Person():
+class Person:
 
     # The constructor
     def __init__(
@@ -22,7 +22,7 @@ class Person():
 
 
 class Student(Person):
-    university = "Radboud"
+    university = "Radboud"  # Class data attribute
 
     # The constructor
     def __init__(
@@ -57,7 +57,7 @@ class Student(Person):
 
     @classmethod
     def print_univesity_slogan(cls):
-        print(f"{Student.university} is amazing")
+        print(f"{cls.university} is amazing")
 
 
 class TeachingAssistant(Student):
@@ -79,12 +79,3 @@ class TeachingAssistant(Student):
 
     def teach(self):
         print(f"TA {self.last_name} ({self.e_number}) is teaching!")
-
-
-if __name__ == "__main__":
-    student = Student("Daan", "W", 21, "s1234567")
-    print(student.university)
-    student.university = "R"
-    student2 = Student("Damai", "W", 21, "s1234567")
-    print(student2.university)
-    print(Student.university)
